@@ -13,19 +13,7 @@ const Head = () => {
   const dispatch = useDispatch();
 
   /**
-   * 
-   * key - i
-   * -render the component 
-   * -useEffect();
-   * -start timer => make API call aftert 200ms
-   * key- ip
-   *  - destroy the component (useEffect return method)
-   *  - re-render the component 
-   *  - useEllfect()
-   * 
-   * 
-   * 
-   * 
+   *    
    * 
    * setTimeOut(200) - declines
    * 
@@ -50,8 +38,6 @@ const Head = () => {
     return () => {
       clearTimeout(timer);
     };
-    // make an API call after every key pass
-    //but if the diffrance between 2 api calss is < 200 decline the API call
   }, [searchQuery]);
 
 //Api for suggestions 
@@ -106,7 +92,7 @@ const Head = () => {
           </button>
         </div>
         {showSuggestions && (
-          <div className="fixed bg-white py-2 px-2 w-[37rem] shadow-lg rounded-lg border border-gray-100">
+          <div className="absolute bg-white py-2 px-2 w-[37rem] shadow-lg rounded-lg border border-gray-100">
             <ul>
               {suggestions.map((s) => (
                 <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
