@@ -5,7 +5,7 @@ const list = ["All", "Live", "Gaming"];
 
 const ButtonList = () => {
   return (
-    <div className="flex">
+    <div className="flex scroll-mr-6 snap-start ...">
       <Button name="All" />
       <Button name="Gaming" />
       <Button name="Songs" />
@@ -16,8 +16,8 @@ const ButtonList = () => {
       <Button name="Cricket" />
       <Button name="Valentines" />
       <Button name="Cricket" />
-      <Button name="Cooking" />
       <Button name="Cricket" />
+
     </div>
   );
 };
