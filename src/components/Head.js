@@ -13,11 +13,30 @@ const Head = () => {
   const dispatch = useDispatch();
 
   /**
+   * 
+   * key - i
+   * -render the component 
+   * -useEffect();
+   * -start timer => make API call aftert 200ms
+   * key- ip
+   *  - destroy the component (useEffect return method)
+   *  - re-render the component 
+   *  - useEllfect()
+   * 
+   * 
+   * 
+   * 
+   * 
+   * setTimeOut(200) - declines
+   * 
+   * 
    *  searchCache = {
    *     "iphone": ["iphone 11", "iphone 14"]
    *  }
    *  searchQuery = iphone
    */
+
+  //Debouncing 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,7 +50,11 @@ const Head = () => {
     return () => {
       clearTimeout(timer);
     };
+    // make an API call after every key pass
+    //but if the diffrance between 2 api calss is < 200 decline the API call
   }, [searchQuery]);
+
+//Api for suggestions 
 
   const getSearchSugsestions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
